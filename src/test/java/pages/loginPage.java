@@ -13,6 +13,7 @@ public class loginPage {
 		PageFactory.initElements(Driver.getDriver(), this);
 	}
 	//testing
+	//shafkat branch
 	@FindBy(name="username")
 	public WebElement usernameField;
 	

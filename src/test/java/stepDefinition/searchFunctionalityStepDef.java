@@ -13,7 +13,7 @@ public class searchFunctionalityStepDef {
 
 	@When("the user enters {string} in the search bar")
 	public void the_user_enters_in_the_search_bar(String string) {
-		System.out.println("testing");
+		System.out.println(string);
 
 	}
 
@@ -25,7 +25,7 @@ public class searchFunctionalityStepDef {
 
 	@Then("the user should see search results for {string}")
 	public void the_user_should_see_search_results_for(String string) {
-		System.out.println("testing");
+		System.out.println(string);
 
 	}
 

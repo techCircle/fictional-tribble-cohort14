@@ -8,7 +8,7 @@ Scenario Outline: Searching for Products
 	And clicks on the search button
 	Then the user should see search results for "<search_query>"
 	
-	Example:
+	Examples:
 	|search_query|
 	|iPhone			 |
 	|Samsung		 |

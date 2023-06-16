@@ -1,11 +1,19 @@
 package Utilitiez;
 
+import java.io.File;
+import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Set;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchFrameException;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -220,10 +228,40 @@ public class commonMethods extends PageInitializer {
     }
 	
 	
+    public static String fn_TakeSnapshot(WebDriver driver, String DestFilePath) throws IOException{
+		//String TS=fn_GetTimeStamp();
+		TakesScreenshot tss=(TakesScreenshot) driver;
+		File srcfileObj= tss.getScreenshotAs(OutputType.FILE);
+		//DestFilePath=DestFilePath+TS+".png";
+		File DestFileObj=new File(DestFilePath);
+		FileUtils.copyFile(srcfileObj, DestFileObj);
+		return DestFilePath;
+		}
 	
 	
-	
-	
+    public static void takeScreenshot(WebDriver driver) throws IOException {
+        // Create object of SimpleDateFormat class and decide the format
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy_MM_dd_HH_mm_ss");
+
+        // get the current date time with LocalDateTime
+        LocalDateTime now = LocalDateTime.now();
+
+        // Convert the date into the string with the specified format
+        String dateString = now.format(formatter);
+        
+        // Casting WebDriver to TakeScreenshot
+        TakesScreenshot screenshot = (TakesScreenshot) driver;
+
+        // Get the screenshot as an output file
+        File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
+
+        // Define the destination path with the unique name
+        String destFilePath = "target/screenshot_" + dateString + ".png";
+        File destFile = new File(destFilePath);
+
+        // Use FileUtils to copy the screenshot to the destination
+        FileUtils.copyFile(srcFile, destFile);
+    }
 	
 	
 	

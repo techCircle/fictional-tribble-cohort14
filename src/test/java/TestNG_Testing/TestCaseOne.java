@@ -14,7 +14,7 @@ public class TestCaseOne {
 		AssertJUnit.assertEquals(false, true);
 	}
 
-	@Test
+	@Test(groups="regressionTest")
 	public void test2() {
 		AssertJUnit.assertEquals(false, true);
 	}

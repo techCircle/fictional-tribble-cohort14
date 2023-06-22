@@ -98,6 +98,7 @@
 
 					<suiteXmlFiles>
 						<suiteXmlFile>ShafkatTestingSprint21.xml</suiteXmlFile>
+						<suiteXmlFile>RegressionTest.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>

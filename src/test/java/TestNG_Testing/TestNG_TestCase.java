@@ -36,6 +36,7 @@ public class TestNG_TestCase {
 		Driver.getDriver();
 		String expectedTitle = "OrangeHDR";
 		String actualTitle = Driver.getDriver().getTitle();
+		System.out.println("Test 1");
 		
 	//	AssertJUnit.assertEquals(expectedTitle, actualTitle);
 	}
@@ -44,6 +45,8 @@ public class TestNG_TestCase {
 	public void Test2closeBrowser() {
 		Driver.getDriver();
 		Reporter.log("Driver closed After Testing");
+		System.out.println("Test 2");
+
 	}
 	
 	

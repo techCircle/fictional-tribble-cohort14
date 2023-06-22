@@ -1,11 +1,10 @@
 package SeleniumDay6;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,7 +18,7 @@ public class iframesTestCases {
 	WebDriver driver;
 	Actions action;
 
-	@Before
+	@BeforeMethod
 	public void openBrowser() {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
@@ -45,8 +44,7 @@ public class iframesTestCases {
 //		selectInterTab("Sortable");	
 	}
 	
-	@Ignore
-	@Test
+	@Test(enabled = false)
 	public void draggableTest() {
 		selectInterTab("Draggable");
 		driver.switchTo().frame(0);

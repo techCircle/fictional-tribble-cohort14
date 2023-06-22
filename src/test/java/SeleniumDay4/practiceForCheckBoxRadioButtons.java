@@ -1,10 +1,10 @@
 package SeleniumDay4;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.AssertJUnit;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -16,7 +16,7 @@ public class practiceForCheckBoxRadioButtons {
 	WebDriver driver;
 	String expectedString = "Do you like the site?";
 
-	@Before
+	@BeforeMethod
 	public void openBrowser() {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
@@ -29,11 +29,11 @@ public class practiceForCheckBoxRadioButtons {
 	public void clickAndVerifyRadioButton() {
 
 		String actualString = driver.findElement(By.xpath("//div[@class='mb-3']")).getText();
-		Assert.assertEquals(expectedString, actualString);
+		AssertJUnit.assertEquals(expectedString, actualString);
 		driver.findElement(By.xpath("//div[@class='mb-3']/following-sibling::div[1]")).click();
 		String yesRadioButtonText = driver.findElement(By.xpath("//p[@class='mt-3']")).getText();
-		Assert.assertTrue(yesRadioButtonText.contains("Yes"));
-		Assert.assertFalse(driver.findElement(By.xpath("//div[@class='mb-3']/following-sibling::div[2]")).isSelected());
+		AssertJUnit.assertTrue(yesRadioButtonText.contains("Yes"));
+		AssertJUnit.assertFalse(driver.findElement(By.xpath("//div[@class='mb-3']/following-sibling::div[2]")).isSelected());
 		// Assert.assertFalse(driver.findElement(By.xpath("//div[@class='mb-3']/following-sibling::div[3]")).isEnabled());
 
 	}

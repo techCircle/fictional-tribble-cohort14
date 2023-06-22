@@ -1,6 +1,7 @@
 package UPackage;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 
 import Utilitiez.commonMethods;
 

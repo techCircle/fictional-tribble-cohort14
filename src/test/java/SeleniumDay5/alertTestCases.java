@@ -1,9 +1,8 @@
 package SeleniumDay5;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.AssertJUnit;
 import Utilitiez.ConfigurationReader;
 import Utilitiez.Driver;
 import Utilitiez.commonMethods;
@@ -11,7 +10,7 @@ import Utilitiez.commonMethods;
 public class alertTestCases extends commonMethods{
 	//WebDriver driver;
 
-	@Before
+	@BeforeMethod
 	public void openBrowser() {
 		Driver.getDriver();
 		Driver.getDriver().navigate().to("https://www.hyrtutorials.com/p/alertsdemo.html");;
@@ -48,7 +47,7 @@ public class alertTestCases extends commonMethods{
 		Driver.getDriver().switchTo().alert().sendKeys(textTobeSent);
 		acceptAlert();
 		String wholeOutputText = ap.promptOutput.getText();
-		Assert.assertTrue(wholeOutputText.contains(textTobeSent));
+		AssertJUnit.assertTrue(wholeOutputText.contains(textTobeSent));
 		
 	}
 	

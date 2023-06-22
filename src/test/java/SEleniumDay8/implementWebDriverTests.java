@@ -1,8 +1,8 @@
 package SEleniumDay8;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
 import org.openqa.selenium.By;
 
 import Utilitiez.Driver;
@@ -11,12 +11,12 @@ public class implementWebDriverTests {
 	
 	
 	
-	@Before
+	@BeforeMethod
 	public void setUp() {
 		Driver.getDriver();
 	}
 	
-	@After
+	@AfterMethod
 	public void closeBrowser() {
 		Driver.tearDown();
 	}

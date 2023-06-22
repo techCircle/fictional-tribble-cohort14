@@ -1,5 +1,6 @@
 package Utilitiez;
 
+import org.testng.annotations.AfterMethod;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -72,6 +73,7 @@ public class Driver {
 	}
 
 
+	@AfterMethod
 	public static void tearDown() {
 		if (driver != null) {
 			driver.close();

@@ -1,10 +1,11 @@
 package SeleniumDay5;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.Assert;
+import org.testng.AssertJUnit;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -13,7 +14,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class assertionsTestCases {
 	WebDriver driver;
 
-	@Before
+	@BeforeMethod
 	public void openBrowser() {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
@@ -32,7 +33,7 @@ public class assertionsTestCases {
 		String expectedURL = "https://www.hyrtutorials.com/";
 
 		// assertion stops the execution at failure
-		Assert.assertEquals(expectedTitle, actualTitleOfThePage);
+		AssertJUnit.assertEquals(expectedTitle, actualTitleOfThePage);
 
 		System.out.println("hello world");
 		///////////////////////////////////////////
@@ -40,11 +41,11 @@ public class assertionsTestCases {
 		Boolean isTitleMatch = actualCurrentURL.equals(expectedURL);
 		
 		
-		Assert.assertEquals("expected", "actual");
+		AssertJUnit.assertEquals("expected", "actual");
 		
 		Assert.assertTrue(isTitleMatch); 
 		
-		Assert.assertFalse(true);
+		AssertJUnit.assertFalse(true);
 	
 	}
 

@@ -2,6 +2,8 @@ package UPackage;
 
 
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -27,7 +29,7 @@ public class pageTesting extends commonMethods {
 		lp.passwordField.sendKeys(ConfigurationReader.getProperty("orangeHRM_password"));
 		lp.loginButton.click();
 		//verifying that you are logged in
-		Assert.assertTrue(dp.dashboardText.isDisplayed());
+		AssertJUnit.assertTrue(dp.dashboardText.isDisplayed());
 	
 	}
 	

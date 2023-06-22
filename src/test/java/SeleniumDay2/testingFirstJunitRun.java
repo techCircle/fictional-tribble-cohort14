@@ -1,8 +1,8 @@
 package SeleniumDay2;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -12,7 +12,7 @@ public class testingFirstJunitRun {
 
 	WebDriver driver;
 	
-	@Before
+	@BeforeMethod
 	public void openBrowser() {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
@@ -39,7 +39,7 @@ public class testingFirstJunitRun {
 	}
 	
 	
-	@After
+	@AfterMethod
 	public void afterMethod() {
 		//closes current browser
 		driver.close();

@@ -2,6 +2,10 @@ package TestNG_Testing;
 
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -22,8 +26,12 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class TestNG_TestCase {
 	
 	
+	public void testCase1() {
+		
+	}
 	
-	@Test  ///failed test
+	
+	@Test(groups="regressionTest")  ///failed test
 	public void Test1openBrowser() {
 		Driver.getDriver();
 		String expectedTitle = "OrangeHDR";
@@ -32,7 +40,7 @@ public class TestNG_TestCase {
 		AssertJUnit.assertEquals(expectedTitle, actualTitle);
 	}
 	
-	@Test // sucess test
+	@Test(groups="regressionTest") // sucess test
 	public void Test2closeBrowser() {
 		Driver.getDriver();
 		Reporter.log("Driver closed After Testing");

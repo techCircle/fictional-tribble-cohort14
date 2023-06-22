@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+	<groups>
+	<run>
+		<include name= "regressionTest"></include>
+	</run>
+	</groups>
+
+
+
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="TestNG_Testing.TestNG_TestCase"/>
+      <class name="testNG_Topics.annotations_description"/>
+      <class name="testNG_Topics.DependencyTestUsingAnnotation"/>
+      <class name="TestNG_Testing.TestCaseOne"/>
+      <class name="SeleniumDay6.iframesTestCases"/>
+      <class name="SeleniumDay3.siblingXpath"/>
+      <class name="Area51.homePageTestCases"/>
+      <class name="SeleniumDay5.dynamicDropdownTestCase"/>
+      <class name="SeleniumDay6.multipleWindowHandles"/>
+      <class name="SeleniumDay4.waitClassesTesting"/>
+      <class name="SeleniumDay4.checkboxesAndRadioButtons"/>
+      <class name="Utilitiez.Driver"/>
+      <class name="stepDefinition.Hooks"/>
+      <class name="SeleniumDay5.assertionsTestCases"/>
+      <class name="testNG_Topics.ExpectedExceptionTest"/>
+      <class name="SeleniumDay6.windowhandlepractice"/>
+      <class name="testNG_Topics.ParallelTest"/>
+      <class name="UPackage.pageTesting"/>
+      <class name="UPackage.checkoutTesting"/>
+      <class name="SeleniumDay5.alertTestCases"/>
+      <class name="testNG_Topics.priorityTest"/>
+      <class name="testNG_Topics.GroupTestExample"/>
+      <class name="SeleniumDay3.xpathContainsText"/>
+      <class name="SEleniumDay8.configuringTestNG"/>
+      <class name="stepDefinition.homePageStepDef"/>
+      <class name="SeleniumDay5.staticDropDownTestCase"/>
+      <class name="SeleniumDay2.testingFirstJunitRun"/>
+      <class name="testNG_Topics.DataProvidorTestCase"/>
+      <class name="SeleniumDay6.arraysOfProductsTestCases"/>
+      <class name="SeleniumDay2.importanceOfLocators"/>
+      <class name="SeleniumDay4.practiceForCheckBoxRadioButtons"/>
+      <class name="SeleniumDay7.openBroswerUsingDriverClass"/>
+      <class name="SEleniumDay8.implementWebDriverTests"/>
+      <class name="testNG_Topics.TestNG_HomePageTests"/>
+      <class name="testNG_Topics.testNG_SampleTest"/>
+      <class name="SeleniumDay6.actionClassTestCases"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

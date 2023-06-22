@@ -31,7 +31,7 @@ public class TestNG_TestCase {
 	}
 	
 	
-	@Test(groups="regressionTest")  ///failed test
+	@Test(groups="shafkat")  ///failed test
 	public void Test1openBrowser() {
 		Driver.getDriver();
 		String expectedTitle = "OrangeHDR";
@@ -40,7 +40,7 @@ public class TestNG_TestCase {
 		AssertJUnit.assertEquals(expectedTitle, actualTitle);
 	}
 	
-	@Test(groups="regressionTest") // sucess test
+	@Test(groups="shafkat") // sucess test
 	public void Test2closeBrowser() {
 		Driver.getDriver();
 		Reporter.log("Driver closed After Testing");
